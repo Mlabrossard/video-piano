@@ -1,0 +1,309 @@
+[gd_scene load_steps=11 format=3 uid="uid://c60w1yvx7db16"]
+
+[ext_resource type="Script" uid="uid://5wgs0buxvq8x" path="res://piano.gd" id="1_onqjq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rkxpl"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.34901962, 0.7882353, 0.7647059, 0.60784316)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_onqjq"]
+bg_color = Color(0.35086948, 0.78939015, 0.7655037, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vetfv"]
+bg_color = Color(1, 1, 1, 0.43529412)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dil3f"]
+bg_color = Color(1, 1, 1, 0.43529412)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yglpy"]
+bg_color = Color(1, 1, 1, 0.43529412)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_34k2k"]
+bg_color = Color(1, 1, 1, 0.43529412)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_doij8"]
+bg_color = Color(1, 1, 1, 0.43529412)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_avuo0"]
+bg_color = Color(1, 1, 1, 0.43529412)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ys1d8"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.34901962, 0.7882353, 0.7647059, 0.60784316)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[node name="Piano" type="Node2D"]
+script = ExtResource("1_onqjq")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+show_behind_parent = true
+offset_right = 1151.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 1)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Piano Ui" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="WhiteKeys" type="Control" parent="Piano Ui"]
+anchors_preset = 0
+offset_left = 360.0
+offset_top = 596.0
+offset_right = 400.0
+offset_bottom = 636.0
+
+[node name="C" type="Button" parent="Piano Ui/WhiteKeys"]
+layout_mode = 0
+offset_left = 177.0
+offset_top = -322.0
+offset_right = 217.0
+offset_bottom = -282.0
+rotation = 0.7853982
+theme_override_styles/normal = SubResource("StyleBoxFlat_rkxpl")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_onqjq")
+
+[node name="D" type="Button" parent="Piano Ui/WhiteKeys"]
+layout_mode = 0
+offset_left = 114.0
+offset_top = -221.0
+offset_right = 154.0
+offset_bottom = -181.0
+rotation = 0.7853982
+theme_override_styles/normal = SubResource("StyleBoxFlat_rkxpl")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vetfv")
+
+[node name="E" type="Button" parent="Piano Ui/WhiteKeys"]
+layout_mode = 0
+offset_left = 273.0
+offset_top = -326.0
+offset_right = 313.0
+offset_bottom = -286.0
+rotation = 0.7853982
+theme_override_styles/normal = SubResource("StyleBoxFlat_rkxpl")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_dil3f")
+
+[node name="F" type="Button" parent="Piano Ui/WhiteKeys"]
+layout_mode = 0
+offset_left = 344.0
+offset_top = -229.0
+offset_right = 384.0
+offset_bottom = -189.0
+rotation = 0.7853982
+theme_override_styles/normal = SubResource("StyleBoxFlat_rkxpl")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_yglpy")
+
+[node name="G" type="Button" parent="Piano Ui/WhiteKeys"]
+layout_mode = 0
+offset_left = 226.0
+offset_top = -198.0
+offset_right = 266.0
+offset_bottom = -158.0
+rotation = 0.7853982
+theme_override_styles/normal = SubResource("StyleBoxFlat_rkxpl")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_34k2k")
+
+[node name="A" type="Button" parent="Piano Ui/WhiteKeys"]
+layout_mode = 0
+offset_left = 67.0
+offset_top = -271.0
+offset_right = 107.0
+offset_bottom = -231.0
+rotation = 0.7853982
+theme_override_styles/normal = SubResource("StyleBoxFlat_rkxpl")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_doij8")
+
+[node name="B" type="Button" parent="Piano Ui/WhiteKeys"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 0
+offset_left = 389.0
+offset_top = -270.0
+offset_right = 429.0
+offset_bottom = -230.0
+rotation = 0.7853982
+theme_override_styles/normal = SubResource("StyleBoxFlat_rkxpl")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_avuo0")
+
+[node name="BlackKeys" type="Control" parent="Piano Ui"]
+anchors_preset = 0
+offset_left = 369.0
+offset_top = 445.0
+offset_right = 409.0
+offset_bottom = 485.0
+
+[node name="Cs" type="Button" parent="Piano Ui/BlackKeys"]
+layout_mode = 0
+offset_left = 169.35535
+offset_top = -96.0
+offset_right = 219.35535
+offset_bottom = -46.0
+rotation = 0.7944791
+theme_override_constants/h_separation = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_ys1d8")
+
+[node name="Ds" type="Button" parent="Piano Ui/BlackKeys"]
+layout_mode = 0
+offset_left = 312.35535
+offset_top = -150.99997
+offset_right = 362.35535
+offset_bottom = -100.99997
+rotation = 0.7853982
+theme_override_styles/normal = SubResource("StyleBoxFlat_ys1d8")
+
+[node name="Fs" type="Button" parent="Piano Ui/BlackKeys"]
+layout_mode = 0
+offset_left = 122.35535
+offset_top = -148.0
+offset_right = 172.35535
+offset_bottom = -98.0
+rotation = 0.7853982
+theme_override_styles/normal = SubResource("StyleBoxFlat_ys1d8")
+
+[node name="Gs" type="Button" parent="Piano Ui/BlackKeys"]
+layout_mode = 0
+offset_left = 217.0
+offset_top = -146.0
+offset_right = 267.0
+offset_bottom = -96.0
+rotation = 0.7853982
+theme_override_styles/normal = SubResource("StyleBoxFlat_ys1d8")
+
+[node name="As" type="Button" parent="Piano Ui/BlackKeys"]
+layout_mode = 0
+offset_left = 267.35535
+offset_top = -97.0
+offset_right = 317.35535
+offset_bottom = -47.0
+rotation = 0.7853982
+theme_override_styles/normal = SubResource("StyleBoxFlat_ys1d8")
+
+[node name="Songplayer" type="AudioStreamPlayer2D" parent="."]
+
+[node name="VideoPlayers" type="Node2D" parent="."]
+
+[node name="C" type="VideoStreamPlayer" parent="VideoPlayers"]
+offset_left = 606.0
+offset_top = 29.0
+offset_right = 1137.5555
+offset_bottom = 328.0
+expand = true
+
+[node name="D" type="VideoStreamPlayer" parent="VideoPlayers"]
+offset_left = 495.11108
+offset_top = 217.0
+offset_right = 1108.0
+offset_bottom = 611.0
+expand = true
+
+[node name="E" type="VideoStreamPlayer" parent="VideoPlayers"]
+offset_left = 298.0
+offset_top = 277.0
+offset_right = 837.77783
+offset_bottom = 624.0
+expand = true
+
+[node name="F" type="VideoStreamPlayer" parent="VideoPlayers"]
+offset_left = 72.0
+offset_top = 199.0
+offset_right = 633.55554
+offset_bottom = 560.0
+expand = true
+
+[node name="G" type="VideoStreamPlayer" parent="VideoPlayers"]
+offset_left = 321.88885
+offset_top = 98.0
+offset_right = 827.44446
+offset_bottom = 423.0
+expand = true
+
+[node name="A" type="VideoStreamPlayer" parent="VideoPlayers"]
+offset_left = 142.0
+offset_top = 79.0
+offset_right = 702.00006
+offset_bottom = 439.0
+expand = true
+
+[node name="B" type="VideoStreamPlayer" parent="VideoPlayers"]
+offset_left = 184.0
+offset_top = 148.0
+offset_right = 793.77783
+offset_bottom = 540.0
+expand = true
+
+[node name="Cs" type="VideoStreamPlayer" parent="VideoPlayers"]
+offset_left = 261.1111
+offset_top = 43.0
+offset_right = 855.3334
+offset_bottom = 425.0
+expand = true
+
+[node name="Ds" type="VideoStreamPlayer" parent="VideoPlayers"]
+offset_left = 274.0
+offset_top = 48.0
+offset_right = 908.6666
+offset_bottom = 456.0
+expand = true
+
+[node name="Fs" type="VideoStreamPlayer" parent="VideoPlayers"]
+offset_left = 446.66666
+offset_top = 282.0
+offset_right = 883.7778
+offset_bottom = 563.0
+expand = true
+
+[node name="Gs" type="VideoStreamPlayer" parent="VideoPlayers"]
+offset_left = 341.0
+offset_top = 36.0
+offset_right = 935.22217
+offset_bottom = 418.0
+expand = true
+
+[node name="As" type="VideoStreamPlayer" parent="VideoPlayers"]
+offset_left = 27.0
+offset_top = 22.0
+offset_right = 747.2222
+offset_bottom = 485.0
+expand = true
+
+[connection signal="button_down" from="Piano Ui/WhiteKeys/C" to="." method="_on_c_button_down"]
+[connection signal="button_up" from="Piano Ui/WhiteKeys/C" to="." method="_on_c_button_up"]
+[connection signal="button_down" from="Piano Ui/WhiteKeys/D" to="." method="_on_d_button_down"]
+[connection signal="button_up" from="Piano Ui/WhiteKeys/D" to="." method="_on_d_button_up"]
+[connection signal="button_down" from="Piano Ui/WhiteKeys/E" to="." method="_on_e_button_down"]
+[connection signal="button_up" from="Piano Ui/WhiteKeys/E" to="." method="_on_e_button_up"]
+[connection signal="button_down" from="Piano Ui/WhiteKeys/F" to="." method="_on_f_button_down"]
+[connection signal="button_up" from="Piano Ui/WhiteKeys/F" to="." method="_on_f_button_up"]
+[connection signal="button_down" from="Piano Ui/WhiteKeys/G" to="." method="_on_g_button_down"]
+[connection signal="button_up" from="Piano Ui/WhiteKeys/G" to="." method="_on_g_button_up"]
+[connection signal="button_down" from="Piano Ui/WhiteKeys/A" to="." method="_on_a_button_down"]
+[connection signal="button_up" from="Piano Ui/WhiteKeys/A" to="." method="_on_a_button_up"]
+[connection signal="button_down" from="Piano Ui/WhiteKeys/B" to="." method="_on_b_button_down"]
+[connection signal="button_up" from="Piano Ui/WhiteKeys/B" to="." method="_on_b_button_up"]
+[connection signal="button_down" from="Piano Ui/BlackKeys/Cs" to="." method="_on_cs_button_down"]
+[connection signal="button_up" from="Piano Ui/BlackKeys/Cs" to="." method="_on_cs_button_up"]
+[connection signal="button_down" from="Piano Ui/BlackKeys/Ds" to="." method="_on_ds_button_down"]
+[connection signal="button_up" from="Piano Ui/BlackKeys/Ds" to="." method="_on_ds_button_up"]
+[connection signal="button_down" from="Piano Ui/BlackKeys/Fs" to="." method="_on_fs_button_down"]
+[connection signal="button_up" from="Piano Ui/BlackKeys/Fs" to="." method="_on_fs_button_up"]
+[connection signal="button_down" from="Piano Ui/BlackKeys/Gs" to="." method="_on_gs_button_down"]
+[connection signal="button_up" from="Piano Ui/BlackKeys/Gs" to="." method="_on_gs_button_up"]
+[connection signal="button_down" from="Piano Ui/BlackKeys/As" to="." method="_on_as_button_down"]
+[connection signal="button_up" from="Piano Ui/BlackKeys/As" to="." method="_on_as_button_up"]
