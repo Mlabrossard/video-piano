@@ -144,8 +144,8 @@ func play_video_for(note):
 		var rand_height = rand_width / note_ratios[note]
 		vp.size = Vector2(rand_width, rand_height)
 
-		var max_x = max(0, get_viewport().size.x - rand_width)
-		var max_y = max(0, get_viewport().size.y - rand_height)
+		var max_x = max(0, get_viewport_rect().size.x - rand_width)
+		var max_y = max(0, get_viewport_rect().size.y - rand_height)
 		vp.position = Vector2(randf_range(0, max_x), randf_range(0, max_y))
 
 		video_players[note].stream = note_videos[note]
