@@ -1,17 +1,18 @@
 extends Camera3D
 
-var rotation_speed = 0.01
-var radius = 30.0  # distance par rapport au centre
+var radius = 30.0
 var angle = 80.0
 var center = Vector3(-1, 7, 0)
 
+var auto_rotation_speed = 0.05
+var is_dragging = false
+var last_mouse_pos = Vector2.ZERO
+var drag_sensitivity = 0.005
+
 func _process(delta):
-	angle += rotation_speed * delta
-	position.x = sin(angle) * radius
-	position.z = cos(angle) * radius
-	look_at(center)  # toujours regarder le centre de la maison
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+	if not is_dragging:
+		# rotation automatique quand pas en train de drag
+		angle += auto_rotation_speed * delta
+		position.x = sin(angle) * radius
+		position.z = cos(angle) * radius
+		look_at(center)

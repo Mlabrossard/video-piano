@@ -26,6 +26,15 @@ window/size/viewport_height=1080
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
+[file_customization]
+
+folder_colors={
+"res://Blender Asset/": "pink",
+"res://Icons/": "red",
+"res://sounds/": "orange",
+"res://videos/": "green"
+}
+
 [rendering]
 
 environment/defaults/default_clear_color=Color(0, 0, 0, 1)
